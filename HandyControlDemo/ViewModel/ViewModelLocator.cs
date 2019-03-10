@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
@@ -8,9 +9,22 @@ namespace HandyControlDemo.ViewModel
 {
     public class ViewModelLocator
     {
+        class SimpleIocService : ServiceLocatorImplBase
+        {
+            protected override IEnumerable<object> DoGetAllInstances(Type serviceType)
+            {
+                throw new NotImplementedException();
+            }
+
+            protected override object DoGetInstance(Type serviceType, string key)
+            {
+                return SimpleIoc.Default.GetService(serviceType);
+            }
+        }
+
         public ViewModelLocator()
         {
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            ServiceLocator.SetLocatorProvider(() =>new SimpleIocService());// SimpleIoc.Default);
 
             SimpleIoc.Default.Register<DataService>();
 

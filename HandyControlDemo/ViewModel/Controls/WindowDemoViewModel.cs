@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
+//using GalaSoft.MvvmLight.CommandWpf;
 using HandyControlDemo.Tools;
 
 namespace HandyControlDemo.ViewModel

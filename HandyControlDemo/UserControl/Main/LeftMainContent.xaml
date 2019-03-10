@@ -9,11 +9,11 @@
         xmlns:langs="clr-namespace:HandyControlDemo.Properties.Langs"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <TabControl SelectionChanged="TabControl_OnSelectionChanged" Style="{StaticResource TabControlInLine}" Background="Transparent" >
-        <i:Interaction.Triggers>
+        <!--<i:Interaction.Triggers>
             <i:EventTrigger EventName="SelectionChanged">
                 <command:EventToCommand Command="{Binding SwitchDemoCmd}" PassEventArgsToCommand="True" />
             </i:EventTrigger>
-        </i:Interaction.Triggers>
+        </i:Interaction.Triggers>-->
         <TabItem Background="Transparent" Header="{x:Static langs:Lang.Styles}">
             <Grid>
                 <Grid.RowDefinitions>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
+//using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Messaging;
 using HandyControlDemo.Data;
 using HandyControlDemo.Service;
